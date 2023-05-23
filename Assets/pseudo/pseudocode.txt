@@ -1,0 +1,19 @@
+this is my initial pseudo code:
+
+start by:
+
+// add html links to jQuery, DayJs, and Bootstrap 
+
+// update top of the page to show day and time
+
+// populate the page with full day blocks of one hour
+
+// format each block name to yyyymmddHH and save the contents in local storage;
+
+// us Bootstrap to set color and styles
+    // must use if conditions to compare timeblock with time hour
+
+// review and implement clicks and events for each timeblock
+// save button to write into local storage
+
+// all event displays must come from local storage
