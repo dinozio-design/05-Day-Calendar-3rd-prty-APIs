@@ -1,21 +1,25 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+// Wrap all code that interacts with the DOM in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elements in the html.
 $(function () {
- //DOM element references
- var timeDisplayEl = $('#currentDay');
+  // DOM element references
+  var timeDisplayEl = $('#currentDay');
+  // use hour as a reference for naming local storage, as well as html div elements
+  var today = dayjs();
+  var hrBucket = "hour-"+today.format('HH');
   // handle displaying the time
-  function displayTime() {
-    var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
-    timeDisplayEl.text(rightNow);
+ function displayTime() {
+    var rightNow = today.format('MMM DD, YYYY [at] hh:mm a');
+    timeDisplayEl.text(`It is ${rightNow} right now!`);
   }
 
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
+
+  // TODO: Add a listener for click events on the save button. 
+  
+  //This code should use the id in the containing time-block as a key to save the user input in local storage. 
+  
+  //HINT: What does `this` reference in the click listener function? 
+
+  //How can DOM traversal be used to get the "hour-x" id of the time-block containing the button that was clicked? 
+  // How might the id be useful when saving the description in local storage?
   //
 
   // ```
@@ -41,6 +45,11 @@ $(function () {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+
+  // TODO: Add code to display the current date in the header of the page. [DONE!]
+  
+  // make it count down the seconds
+  displayTime();
+
 });
+
