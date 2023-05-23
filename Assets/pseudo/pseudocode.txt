@@ -17,3 +17,4 @@ start by:
 // save button to write into local storage
 
 // all event displays must come from local storage
+// properly implement use of fontawesome and googlefonts api
