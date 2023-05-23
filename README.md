@@ -52,10 +52,10 @@ The following animation demonstrates the application functionality:
 ```
 
 ### Deployed Links
-<!-- 
-1. You can find the URL of my deployed application **here:** <br>[03-Password-Generator-JavaScript - link](https://dinozio-design.github.io/03-Password-Generator-JavaScript/)
 
-2. You can find the URL of my GitHub repository that contains this code **here:** <br>[GitHub Repo - link](https://github.com/dinozio-design/03-Password-Generator-JavaScript) -->
+1. You can find the URL of my deployed application **here:** <br>[05-Day-Calendar-3rd-prty-APIs - link](https://dinozio-design.github.io/05-Day-Calendar-3rd-prty-APIs/)
+
+2. You can find the URL of my GitHub repository that contains this code **here:** <br>[GitHub Repo - link](https://github.com/dinozio-design/05-Day-Calendar-3rd-prty-APIs.git)
 
 ### Images of my App
 > The following image shows the my actual web application's appearance and functionality:
