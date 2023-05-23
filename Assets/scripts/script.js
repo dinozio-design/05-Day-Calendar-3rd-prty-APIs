@@ -1,15 +1,32 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elements in the html.
+
 $(function () {
   // DOM element references
   var timeDisplayEl = $('#currentDay');
+  var timeTable = $('#container');
+  var saveBtn = $('.saveBtn');
   // use hour as a reference for naming local storage, as well as html div elements
   var today = dayjs();
-  var hrBucket = "hour-"+today.format('HH');
+  var hrBucket = "hour-" + today.format('HH');
+
+
   // handle displaying the time
- function displayTime() {
+  function displayTime() {
     var rightNow = today.format('MMM DD, YYYY [at] hh:mm a');
     timeDisplayEl.text(`It is ${rightNow} right now!`);
   }
+
+
+
+
+  saveBtn.on('click', function () {
+    // console.log(this);
+    console.log(timeTable.children("#hour-09").children().eq(1).textarea.value);
+
+  });
+  displayTime();
+
+});
 
 
   // TODO: Add a listener for click events on the save button. 
@@ -49,7 +66,4 @@ $(function () {
   // TODO: Add code to display the current date in the header of the page. [DONE!]
   
   // make it count down the seconds
-  displayTime();
-
-});
 
