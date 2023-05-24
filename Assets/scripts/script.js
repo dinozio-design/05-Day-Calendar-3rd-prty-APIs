@@ -1,13 +1,27 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elements in the html.
 
 $(function () {
+  // declarations
+  var startTime = 15;
+  var timeBlocks = [
+    "hour-09",
+    "hour-10",
+    "hour-11",
+    "hour-12",
+    "hour-13",
+    "hour-14",
+    "hour-15",
+    "hour-16",
+    "hour-17"
+  ];
   // DOM element references
   var timeDisplayEl = $('#currentDay');
   var timeTable = $('#container');
   var saveBtn = $('.saveBtn');
   // use hour as a reference for naming local storage, as well as html div elements
   var today = dayjs();
-  var hrBucket = "hour-" + today.format('HH');
+  // var hrBucket = "hour-" + today.format('HH');
+  var hrBucket = "hour-" + 20;
 
 
   // handle displaying the time
@@ -16,12 +30,36 @@ $(function () {
     timeDisplayEl.text(`It is ${rightNow} right now!`);
   }
 
-
+// set the time table page
+  $.each(timeBlocks, function (i,timeBlock) {
+    console.log("start time is: ", startTime);
+    timeIndex = startTime + i;
+    timeTable.append(`<div id="${timeBlock}" class="row time-block">
+  <div class="col-2 col-md-1 hour text-center py-3">${timeBlock}</div>
+  <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+  <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+    <i class="fas fa-save" aria-hidden="true"></i>
+  </button>
+ </div>`);
+ var entry = $(`#${timeBlock}`);
+//  console.log("Now it is : ", today.hour());
+ console.log("array object is: ", timeBlock);
+ console.log("this is entry: ", entry);
+ console.log("i count is: ", i);
+ console.log("time Index is : ",timeIndex);
+ if (timeIndex === today.hour()){
+  entry.addClass("present");
+ } else if (timeIndex < today.hour()){
+  entry.addClass("past");
+ } else {
+  entry.addClass("future");
+ }
+  })
 
 
   saveBtn.on('click', function () {
     // console.log(this);
-    console.log(timeTable.children("#hour-09").children().eq(1).textarea.value);
+    // console.log(typeof timeTable.children("#hour-09").children().eq(1));
 
   });
   displayTime();
