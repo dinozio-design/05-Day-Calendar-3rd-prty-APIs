@@ -45,11 +45,6 @@ The following animation demonstrates the application functionality:
 ...
 
 
-### My Initial PseudoCode
-```
-    c...
-```
-
 ### Deployed Links
 
 1. You can find the URL of my deployed application **here:** <br>[05-Day-Calendar-3rd-prty-APIs - link](https://dinozio-design.github.io/05-Day-Calendar-3rd-prty-APIs/)
@@ -58,8 +53,8 @@ The following animation demonstrates the application functionality:
 
 ### Images of my App
 > The following image shows the my actual web application's appearance and functionality:
-<!-- 
-![password generator actual](./assets/images/03-javascript-homework-actual.png) -->
+
+![Day Scheduler](./assets/images/my-actual-app.PNG)
 
 ## References
 I used files and resources provided by BCS : GitLab repo UTOR-VIRT-FSF-PT-04-2023-U-LOLC
